@@ -23,7 +23,7 @@ public class Rover {
             throw new RuntimeException("请初始化坐标");
         }
         for (int size = instructions.size(), i = 0; i < size; i++) {
-            instructions.get(i);
+            instructions.get(i).execute(point);
         }
         return getPoint();
     }
