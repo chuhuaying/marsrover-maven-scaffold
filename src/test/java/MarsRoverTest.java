@@ -13,4 +13,12 @@ public class MarsRoverTest {
         Assert.assertTrue(area.contains(new Point(2, 2, Direction.SOUTH)));
         Assert.assertFalse(area.contains(new Point(-12, 2, Direction.NORTH)));
     }
+
+    @Test
+    public void test_get_rover_point() {
+        Rover rover = new Rover();
+        Point point = new Point(0, 0, Direction.SOUTH);
+        rover.deploy(point);
+        Assert.assertEquals(rover.getPoint(), point);
+    }
 }

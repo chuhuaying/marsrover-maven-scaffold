@@ -18,11 +18,6 @@ public class Area {
         boolean x = bB.getX() <= point.getX() && point.getX() <= aA.getX();
         boolean y = dD.getY() <= point.getY() && point.getY() <= aA.getY();
 
-        if (x && y) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return x && y;
     }
 }
