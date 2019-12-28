@@ -11,6 +11,6 @@ public class MarsRoverTest {
         Area area = new Area(A, B, C, D);
 
         Assert.assertTrue(area.contains(new Point(2, 2, Direction.SOUTH)));
-        Assert.assertTrue(area.contains(new Point(-12, 2, Direction.NORTH)));
+        Assert.assertFalse(area.contains(new Point(-12, 2, Direction.NORTH)));
     }
 }
