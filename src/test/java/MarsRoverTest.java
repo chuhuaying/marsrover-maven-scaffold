@@ -21,4 +21,21 @@ public class MarsRoverTest {
         rover.deploy(point);
         Assert.assertEquals(rover.getPoint(), point);
     }
+
+    @Test
+    public void test_Rover_TurnLeft_S() {
+        Instruction instruction = new TurnLeft();
+        Rover rover = new Rover();
+        rover.deploy(new Point(0, 0, Direction.SOUTH));
+        Assert.assertEquals(rover.run(instruction).getDirection(), Direction.WEST);
+    }
+
+    @Test
+    public void test_Rover_TurnRight_S() {
+        Instruction instruction = new TurnRight();
+        Rover rover = new Rover();
+        rover.deploy(new Point(0, 0, Direction.SOUTH));
+        Assert.assertEquals(rover.run(instruction).getDirection(), Direction.EAST);
+    }
+
 }
